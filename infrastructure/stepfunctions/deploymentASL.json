@@ -106,7 +106,6 @@
               "Variable": "$.mfe.Item.deleted.BOOL"
             }
           ],
-          "Comment": "Yes",
           "Next": "Mark deployment aborted"
         }
       ],

@@ -7,38 +7,38 @@ terraform {
   }
 }
 
-provider "aws" {
-  access_key = "test"
-  secret_key = "test"
-  region = "us-east-1"
+# provider "aws" {
+#   access_key = "test"
+#   secret_key = "test"
+#   region = "us-east-1"
 
-  # LocalStack settings
-  skip_credentials_validation = true
-  skip_metadata_api_check = true
-  skip_requesting_account_id = true
+#   # LocalStack settings
+#   skip_credentials_validation = true
+#   skip_metadata_api_check = true
+#   skip_requesting_account_id = true
 
-  endpoints {
-    apigateway     = "http://localhost:4566"
-    cloudformation = "http://localhost:4566"
-    cloudwatch     = "http://localhost:4566"
-    dynamodb       = "http://localhost:4566"
-    es             = "http://localhost:4566"
-    firehose       = "http://localhost:4566"
-    iam            = "http://localhost:4566"
-    kinesis       = "http://localhost:4566"
-    lambda         = "http://localhost:4566"
-    route53       = "http://localhost:4566"
-    redshift      = "http://localhost:4566"
-    s3            = "http://localhost:4566"
-    secretsmanager = "http://localhost:4566"
-    ses           = "http://localhost:4566"
-    sns           = "http://localhost:4566"
-    sqs           = "http://localhost:4566"
-    ssm           = "http://localhost:4566"
-    stepfunctions = "http://localhost:4566"
-    sts           = "http://localhost:4566"
-  }
-}
+#   endpoints {
+#     apigateway     = "http://localhost:4566"
+#     cloudformation = "http://localhost:4566"
+#     cloudwatch     = "http://localhost:4566"
+#     dynamodb       = "http://localhost:4566"
+#     es             = "http://localhost:4566"
+#     firehose       = "http://localhost:4566"
+#     iam            = "http://localhost:4566"
+#     kinesis       = "http://localhost:4566"
+#     lambda         = "http://localhost:4566"
+#     route53       = "http://localhost:4566"
+#     redshift      = "http://localhost:4566"
+#     s3            = "http://localhost:4566"
+#     secretsmanager = "http://localhost:4566"
+#     ses           = "http://localhost:4566"
+#     sns           = "http://localhost:4566"
+#     sqs           = "http://localhost:4566"
+#     ssm           = "http://localhost:4566"
+#     stepfunctions = "http://localhost:4566"
+#     sts           = "http://localhost:4566"
+#   }
+# }
 
 # DynamoDB Tables
 resource "aws_dynamodb_table" "project_store" {
@@ -345,6 +345,7 @@ resource "aws_cognito_user_pool" "pool" {
     allow_admin_create_user_only = true
     
     invite_message_template {
+      sms_message = "Your Frontend Service Discovery username is {username} and the temporary password is {####}"
       email_message = "Your Frontend Service Discovery username is {username} and the temporary password is {####}"
       email_subject = "Your temporary password for Frontend Service Discovery"
     }
