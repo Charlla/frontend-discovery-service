@@ -1,0 +1,40 @@
+# Migration from SAM to Terraform
+
+## Changes Made
+1. Created Terraform configuration files in the `terraform` directory
+   - Set up modular structure for better organization
+   - Created separate modules for DynamoDB, Lambda, API Gateway, Cognito, and Step Functions
+   - Implemented variables for configuration flexibility
+
+2. Local Development Environment
+   - Implemented LocalStack setup using Docker Compose
+   - Added tflocal for local Terraform operations
+   - Created development scripts in `scripts/` directory
+   - Added comprehensive E2E tests for local verification
+
+3. Infrastructure Changes
+   - Maintained all existing resources and functionality
+   - Improved CORS handling in API Gateway
+   - Enhanced DynamoDB configuration with better backup options
+   - Streamlined Cognito user pool setup
+
+4. Development Workflow
+   - Added npm scripts for local development
+   - Implemented proper environment variable handling
+   - Created Docker Compose configuration for LocalStack
+   - Added local testing capabilities
+
+5. Documentation
+   - Updated documentation to reflect new Terraform setup
+   - Added local development guide
+   - Maintained SAM documentation as deprecated alternative
+
+6. Testing
+   - Implemented E2E tests for local development
+   - Added test configuration for local environment
+   - Created test utilities for local testing
+
+7. Backwards Compatibility
+   - Maintained existing SAM setup as deprecated alternative
+   - Ensured smooth migration path for existing deployments
+   - Preserved all existing functionality 

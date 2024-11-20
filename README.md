@@ -84,3 +84,9 @@ Contributions are more than welcome. Please read the
 ## License Summary
 
 This project is licensed under the Apache-2.0 License.
+
+## Local Development
+
+For local development using LocalStack and Terraform, see [Local Setup](docs/LOCAL_SETUP.md).
+
+For the deprecated SAM-based local development, see [Local Development](docs/LOCAL_DEVELOPMENT.md).

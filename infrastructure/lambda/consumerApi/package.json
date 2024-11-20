@@ -1,0 +1,10 @@
+{
+  "name": "consumer-api",
+  "version": "1.0.0",
+  "description": "Consumer API Lambda function",
+  "main": "app.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.x",
+    "@aws-sdk/lib-dynamodb": "^3.x"
+  }
+} 
