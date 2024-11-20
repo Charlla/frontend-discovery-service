@@ -1,13 +1,79 @@
-node_modules/
-.aws-sam/
-samconfig.toml
-.local
-coverage
-.envrc
-venv
-template-flipped.yaml
-.DS_Store
-dist
-examples/terminal/.env
-examples/terminal/.venv/
+# Python virtual environment
+.venv/
+venv/
+env/
+__pycache__/
 *.pyc
+
+# LocalStack
+.localstack/
+volume/
+docker/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+*.tfvars.json
+*.tfbackup
+
+# Lambda build artifacts
+*.zip
+infrastructure/lambda/*/app.zip
+infrastructure/lambda/*/function.zip
+infrastructure/lambda/*/node_modules/
+infrastructure/lambda/*/package-lock.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+test-results/
+
+# Logs
+*.log
+logs/
+tmp/
+
+# Build outputs
+dist/
+build/
+.build/
+.webpack/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+temp/
